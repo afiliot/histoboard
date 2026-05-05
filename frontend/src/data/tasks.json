@@ -3521,5 +3521,37 @@
     "category": "Gland Segmentation",
     "organ": "colon",
     "metric": "mDice"
+  },
+  {
+    "id": "bc_survival_rfs_all",
+    "benchmarkId": "bc_survival",
+    "name": "RFS (All patients)",
+    "organ": "breast",
+    "metric": "c-index",
+    "category": "survival"
+  },
+  {
+    "id": "bc_survival_rfs_erp_her2n",
+    "benchmarkId": "bc_survival",
+    "name": "RFS (ER+ & HER2−)",
+    "organ": "breast",
+    "metric": "c-index",
+    "category": "survival"
+  },
+  {
+    "id": "bc_survival_pfs_all",
+    "benchmarkId": "bc_survival",
+    "name": "PFS (All patients)",
+    "organ": "breast",
+    "metric": "c-index",
+    "category": "survival"
+  },
+  {
+    "id": "bc_survival_pfs_erp_her2n",
+    "benchmarkId": "bc_survival",
+    "name": "PFS (ER+ & HER2−)",
+    "organ": "breast",
+    "metric": "c-index",
+    "category": "survival"
   }
 ]

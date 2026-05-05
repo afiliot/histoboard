@@ -74208,5 +74208,525 @@
     "meanF1": 0.836854,
     "meanF1Lower": 0.828145,
     "meanF1Upper": 0.840804
+  },
+  {
+    "modelId": "bioptimus_h_optimus_1",
+    "taskId": "bc_survival_rfs_all",
+    "value": 0.678,
+    "rank": 1,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.656,
+    "ciUpper": 0.700
+  },
+  {
+    "modelId": "bioptimus_h0_mini",
+    "taskId": "bc_survival_rfs_all",
+    "value": 0.676,
+    "rank": 2,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.653,
+    "ciUpper": 0.698
+  },
+  {
+    "modelId": "paige_ai_virchow2",
+    "taskId": "bc_survival_rfs_all",
+    "value": 0.675,
+    "rank": 3,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.653,
+    "ciUpper": 0.698
+  },
+  {
+    "modelId": "mahmood_lab_uni2",
+    "taskId": "bc_survival_rfs_all",
+    "value": 0.667,
+    "rank": 4,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.644,
+    "ciUpper": 0.689
+  },
+  {
+    "modelId": "bioptimus_h_optimus_0",
+    "taskId": "bc_survival_rfs_all",
+    "value": 0.664,
+    "rank": 5,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.642,
+    "ciUpper": 0.686
+  },
+  {
+    "modelId": "mahmood_lab_conch",
+    "taskId": "bc_survival_rfs_all",
+    "value": 0.663,
+    "rank": 6,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.641,
+    "ciUpper": 0.685
+  },
+  {
+    "modelId": "microsoft_prov_gigapath",
+    "taskId": "bc_survival_rfs_all",
+    "value": 0.663,
+    "rank": 6,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.640,
+    "ciUpper": 0.686
+  },
+  {
+    "modelId": "mahmood_lab_conch_1_5",
+    "taskId": "bc_survival_rfs_all",
+    "value": 0.660,
+    "rank": 8,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.637,
+    "ciUpper": 0.683
+  },
+  {
+    "modelId": "mahmood_lab_uni",
+    "taskId": "bc_survival_rfs_all",
+    "value": 0.657,
+    "rank": 9,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.635,
+    "ciUpper": 0.680
+  },
+  {
+    "modelId": "paige_ai_virchow",
+    "taskId": "bc_survival_rfs_all",
+    "value": 0.656,
+    "rank": 10,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.633,
+    "ciUpper": 0.679
+  },
+  {
+    "modelId": "sichuan_retccl",
+    "taskId": "bc_survival_rfs_all",
+    "value": 0.645,
+    "rank": 11,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.622,
+    "ciUpper": 0.668
+  },
+  {
+    "modelId": "sichuan_ctranspath",
+    "taskId": "bc_survival_rfs_all",
+    "value": 0.632,
+    "rank": 12,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.609,
+    "ciUpper": 0.655
+  },
+  {
+    "modelId": "meta_ai_resnet50_imagenet",
+    "taskId": "bc_survival_rfs_all",
+    "value": 0.612,
+    "rank": 13,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.588,
+    "ciUpper": 0.635
+  },
+  {
+    "modelId": "bioptimus_h_optimus_1",
+    "taskId": "bc_survival_rfs_erp_her2n",
+    "value": 0.670,
+    "rank": 1,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.645,
+    "ciUpper": 0.695
+  },
+  {
+    "modelId": "bioptimus_h0_mini",
+    "taskId": "bc_survival_rfs_erp_her2n",
+    "value": 0.668,
+    "rank": 2,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.642,
+    "ciUpper": 0.693
+  },
+  {
+    "modelId": "paige_ai_virchow2",
+    "taskId": "bc_survival_rfs_erp_her2n",
+    "value": 0.665,
+    "rank": 3,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.639,
+    "ciUpper": 0.690
+  },
+  {
+    "modelId": "mahmood_lab_uni2",
+    "taskId": "bc_survival_rfs_erp_her2n",
+    "value": 0.663,
+    "rank": 4,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.637,
+    "ciUpper": 0.688
+  },
+  {
+    "modelId": "bioptimus_h_optimus_0",
+    "taskId": "bc_survival_rfs_erp_her2n",
+    "value": 0.660,
+    "rank": 5,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.633,
+    "ciUpper": 0.685
+  },
+  {
+    "modelId": "mahmood_lab_conch",
+    "taskId": "bc_survival_rfs_erp_her2n",
+    "value": 0.657,
+    "rank": 6,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.631,
+    "ciUpper": 0.681
+  },
+  {
+    "modelId": "microsoft_prov_gigapath",
+    "taskId": "bc_survival_rfs_erp_her2n",
+    "value": 0.657,
+    "rank": 6,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.631,
+    "ciUpper": 0.682
+  },
+  {
+    "modelId": "mahmood_lab_conch_1_5",
+    "taskId": "bc_survival_rfs_erp_her2n",
+    "value": 0.651,
+    "rank": 8,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.625,
+    "ciUpper": 0.676
+  },
+  {
+    "modelId": "mahmood_lab_uni",
+    "taskId": "bc_survival_rfs_erp_her2n",
+    "value": 0.648,
+    "rank": 9,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.622,
+    "ciUpper": 0.674
+  },
+  {
+    "modelId": "paige_ai_virchow",
+    "taskId": "bc_survival_rfs_erp_her2n",
+    "value": 0.639,
+    "rank": 10,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.613,
+    "ciUpper": 0.665
+  },
+  {
+    "modelId": "sichuan_retccl",
+    "taskId": "bc_survival_rfs_erp_her2n",
+    "value": 0.636,
+    "rank": 11,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.609,
+    "ciUpper": 0.662
+  },
+  {
+    "modelId": "sichuan_ctranspath",
+    "taskId": "bc_survival_rfs_erp_her2n",
+    "value": 0.627,
+    "rank": 12,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.601,
+    "ciUpper": 0.652
+  },
+  {
+    "modelId": "meta_ai_resnet50_imagenet",
+    "taskId": "bc_survival_rfs_erp_her2n",
+    "value": 0.600,
+    "rank": 13,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.572,
+    "ciUpper": 0.627
+  },
+  {
+    "modelId": "bioptimus_h_optimus_1",
+    "taskId": "bc_survival_pfs_all",
+    "value": 0.702,
+    "rank": 1,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.666,
+    "ciUpper": 0.737
+  },
+  {
+    "modelId": "paige_ai_virchow",
+    "taskId": "bc_survival_pfs_all",
+    "value": 0.695,
+    "rank": 2,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.660,
+    "ciUpper": 0.729
+  },
+  {
+    "modelId": "mahmood_lab_conch_1_5",
+    "taskId": "bc_survival_pfs_all",
+    "value": 0.695,
+    "rank": 2,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.660,
+    "ciUpper": 0.729
+  },
+  {
+    "modelId": "bioptimus_h0_mini",
+    "taskId": "bc_survival_pfs_all",
+    "value": 0.692,
+    "rank": 4,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.655,
+    "ciUpper": 0.728
+  },
+  {
+    "modelId": "bioptimus_h_optimus_0",
+    "taskId": "bc_survival_pfs_all",
+    "value": 0.686,
+    "rank": 5,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.651,
+    "ciUpper": 0.722
+  },
+  {
+    "modelId": "mahmood_lab_uni2",
+    "taskId": "bc_survival_pfs_all",
+    "value": 0.683,
+    "rank": 6,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.647,
+    "ciUpper": 0.719
+  },
+  {
+    "modelId": "paige_ai_virchow2",
+    "taskId": "bc_survival_pfs_all",
+    "value": 0.681,
+    "rank": 7,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.645,
+    "ciUpper": 0.718
+  },
+  {
+    "modelId": "mahmood_lab_conch",
+    "taskId": "bc_survival_pfs_all",
+    "value": 0.675,
+    "rank": 8,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.639,
+    "ciUpper": 0.710
+  },
+  {
+    "modelId": "microsoft_prov_gigapath",
+    "taskId": "bc_survival_pfs_all",
+    "value": 0.673,
+    "rank": 9,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.636,
+    "ciUpper": 0.710
+  },
+  {
+    "modelId": "mahmood_lab_uni",
+    "taskId": "bc_survival_pfs_all",
+    "value": 0.671,
+    "rank": 10,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.634,
+    "ciUpper": 0.708
+  },
+  {
+    "modelId": "sichuan_ctranspath",
+    "taskId": "bc_survival_pfs_all",
+    "value": 0.647,
+    "rank": 11,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.609,
+    "ciUpper": 0.686
+  },
+  {
+    "modelId": "meta_ai_resnet50_imagenet",
+    "taskId": "bc_survival_pfs_all",
+    "value": 0.628,
+    "rank": 12,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.590,
+    "ciUpper": 0.666
+  },
+  {
+    "modelId": "sichuan_retccl",
+    "taskId": "bc_survival_pfs_all",
+    "value": 0.627,
+    "rank": 13,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.589,
+    "ciUpper": 0.666
+  },
+  {
+    "modelId": "mahmood_lab_conch_1_5",
+    "taskId": "bc_survival_pfs_erp_her2n",
+    "value": 0.680,
+    "rank": 1,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.636,
+    "ciUpper": 0.721
+  },
+  {
+    "modelId": "paige_ai_virchow",
+    "taskId": "bc_survival_pfs_erp_her2n",
+    "value": 0.678,
+    "rank": 2,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.634,
+    "ciUpper": 0.720
+  },
+  {
+    "modelId": "bioptimus_h_optimus_1",
+    "taskId": "bc_survival_pfs_erp_her2n",
+    "value": 0.670,
+    "rank": 3,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.626,
+    "ciUpper": 0.715
+  },
+  {
+    "modelId": "bioptimus_h_optimus_0",
+    "taskId": "bc_survival_pfs_erp_her2n",
+    "value": 0.670,
+    "rank": 3,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.624,
+    "ciUpper": 0.714
+  },
+  {
+    "modelId": "bioptimus_h0_mini",
+    "taskId": "bc_survival_pfs_erp_her2n",
+    "value": 0.666,
+    "rank": 5,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.619,
+    "ciUpper": 0.711
+  },
+  {
+    "modelId": "mahmood_lab_uni2",
+    "taskId": "bc_survival_pfs_erp_her2n",
+    "value": 0.657,
+    "rank": 6,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.611,
+    "ciUpper": 0.702
+  },
+  {
+    "modelId": "mahmood_lab_conch",
+    "taskId": "bc_survival_pfs_erp_her2n",
+    "value": 0.656,
+    "rank": 7,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.612,
+    "ciUpper": 0.700
+  },
+  {
+    "modelId": "paige_ai_virchow2",
+    "taskId": "bc_survival_pfs_erp_her2n",
+    "value": 0.655,
+    "rank": 8,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.608,
+    "ciUpper": 0.700
+  },
+  {
+    "modelId": "microsoft_prov_gigapath",
+    "taskId": "bc_survival_pfs_erp_her2n",
+    "value": 0.641,
+    "rank": 9,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.594,
+    "ciUpper": 0.687
+  },
+  {
+    "modelId": "mahmood_lab_uni",
+    "taskId": "bc_survival_pfs_erp_her2n",
+    "value": 0.638,
+    "rank": 10,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.592,
+    "ciUpper": 0.683
+  },
+  {
+    "modelId": "sichuan_ctranspath",
+    "taskId": "bc_survival_pfs_erp_her2n",
+    "value": 0.622,
+    "rank": 11,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.573,
+    "ciUpper": 0.670
+  },
+  {
+    "modelId": "meta_ai_resnet50_imagenet",
+    "taskId": "bc_survival_pfs_erp_her2n",
+    "value": 0.606,
+    "rank": 12,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.557,
+    "ciUpper": 0.655
+  },
+  {
+    "modelId": "sichuan_retccl",
+    "taskId": "bc_survival_pfs_erp_her2n",
+    "value": 0.604,
+    "rank": 13,
+    "source": "bc_survival",
+    "retrievedAt": "2026-05-05T00:00:00Z",
+    "ciLower": 0.555,
+    "ciUpper": 0.653
   }
 ]
