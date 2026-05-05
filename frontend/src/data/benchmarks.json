@@ -258,5 +258,22 @@
       "kidney"
     ],
     "taskCount": 18
+  },
+  {
+    "id": "bc_survival_gustafsson",
+    "name": "BC Survival Benchmark",
+    "shortName": "BC Survival",
+    "category": [
+      "pathology",
+      "survival",
+      "H&E"
+    ],
+    "description": "Multi-cohort benchmark by Gustafsson et al. (2026) evaluating 13 pathology foundation models on breast cancer survival prediction (RFS and PFS) across three independent Swedish clinical cohorts (N=5,434 patients). Models are assessed on all patients and on the ER+ & HER2− subgroup, using concordance index (C-index) as the primary metric.",
+    "url": "https://arxiv.org/abs/2604.24679",
+    "paperUrl": "https://arxiv.org/abs/2604.24679",
+    "organs": [
+      "breast"
+    ],
+    "taskCount": 4
   }
 ]

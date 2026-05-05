@@ -2811,7 +2811,7 @@
     "metric": "c_index"
   },
   {
-    "id": "pb_mbc_survival",
+    "id": "pb_mbc_survival_gustafsson",
     "benchmarkId": "pathobench",
     "name": "MBC Survival",
     "category": "Survival Prediction",
@@ -3521,5 +3521,37 @@
     "category": "Gland Segmentation",
     "organ": "colon",
     "metric": "mDice"
+  },
+  {
+    "id": "bc_survival_gustafsson_rfs_all",
+    "benchmarkId": "bc_survival_gustafsson",
+    "name": "RFS (All patients)",
+    "organ": "breast",
+    "metric": "c-index",
+    "category": "survival"
+  },
+  {
+    "id": "bc_survival_gustafsson_rfs_erp_her2n",
+    "benchmarkId": "bc_survival_gustafsson",
+    "name": "RFS (ER+ & HER2−)",
+    "organ": "breast",
+    "metric": "c-index",
+    "category": "survival"
+  },
+  {
+    "id": "bc_survival_gustafsson_pfs_all",
+    "benchmarkId": "bc_survival_gustafsson",
+    "name": "PFS (All patients)",
+    "organ": "breast",
+    "metric": "c-index",
+    "category": "survival"
+  },
+  {
+    "id": "bc_survival_gustafsson_pfs_erp_her2n",
+    "benchmarkId": "bc_survival_gustafsson",
+    "name": "PFS (ER+ & HER2−)",
+    "organ": "breast",
+    "metric": "c-index",
+    "category": "survival"
   }
 ]

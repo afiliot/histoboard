@@ -264,16 +264,18 @@ export default function BenchmarksPage() {
                       </Button>
                     </a>
                   )}
-                  <a
-                    href={benchmark.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button variant="outline">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Github
-                    </Button>
-                  </a>
+                  {benchmark.githubUrl && (
+                    <a
+                      href={benchmark.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="outline">
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        Github
+                      </Button>
+                    </a>
+                  )}
                   {benchmark.datasetUrl && (
                     <a
                       href={benchmark.datasetUrl}

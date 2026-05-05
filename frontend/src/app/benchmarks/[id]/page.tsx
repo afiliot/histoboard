@@ -24,6 +24,7 @@ import { THUNDERDetailedTable } from "@/components/tables/THUNDERDetailedTable";
 import { PathoROBDetailedTable } from "@/components/tables/PathoROBDetailedTable";
 import { PLISMDetailedTable } from "@/components/tables/PLISMDetailedTable";
 import { PFMDenseBenchDetailedTable } from "@/components/tables/PFMDenseBenchDetailedTable";
+import { BCGustaffssonDetailedTable } from "@/components/tables/BCGustaffssonDetailedTable";
 
 import modelsData from "@/data/models.json";
 import tasksData from "@/data/tasks.json";
@@ -70,6 +71,7 @@ const benchmarkTableMap: Record<string, React.ComponentType<{
   pathorob: PathoROBDetailedTable,
   plism: PLISMDetailedTable,
   pfm_densebench: PFMDenseBenchDetailedTable,
+  bc_survival_gustafsson: BCGustaffssonDetailedTable,
 };
 
 export function generateStaticParams() {
@@ -197,12 +199,14 @@ export default async function BenchmarkDetailPage({ params }: { params: Promise<
                   </Button>
                 </a>
               )}
-              <a href={benchmark.url} target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="sm" className="w-full justify-start">
-                  <ExternalLink className="mr-2 h-4 w-4" />
-                  Github
-                </Button>
-              </a>
+              {benchmark.githubUrl && (
+                <a href={benchmark.githubUrl} target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" size="sm" className="w-full justify-start">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Github
+                  </Button>
+                </a>
+              )}
             </div>
           </div>
         </CardHeader>

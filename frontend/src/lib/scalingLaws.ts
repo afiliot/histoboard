@@ -114,6 +114,7 @@ export const ALL_PERFORMANCE_BENCHMARKS: BenchmarkOption[] = [
   { id: "sinai", label: "Sinai SSL" },
   { id: "stamp", label: "STAMP" },
   { id: "thunder", label: "THUNDER" },
+  { id: "bc_survival_gustafsson", label: "BC Survival" },
 ];
 
 /**
@@ -129,6 +130,7 @@ export const ALL_BENCHMARKS: BenchmarkOption[] = [
   { id: "sinai", label: "Sinai SSL" },
   { id: "stamp", label: "STAMP" },
   { id: "thunder", label: "THUNDER" },
+  { id: "bc_survival_gustafsson", label: "BC Survival" },
   // Segmentation benchmarks
   { id: "pfm_densebench", label: "PFM-DenseBench" },
   // Robustness benchmarks
