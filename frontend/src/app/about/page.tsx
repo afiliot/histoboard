@@ -51,6 +51,7 @@ const BENCHMARK_METHODOLOGY: Record<string, { metric: string; source: "official"
   stamp:           { metric: "Average task rank across 31 tasks",                          source: "computed", lowerIsBetter: true },
   stanford:        { metric: "Average AUROC across 41 tasks",                              source: "official" },
   thunder:         { metric: "Rank sum across 6 tasks",                                    source: "official", lowerIsBetter: true },
+  bc_survival_gustafsson: { metric: "Average C-index across 4 survival tasks",            source: "computed" },
 };
 
 export default function AboutPage() {
