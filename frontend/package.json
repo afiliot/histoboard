@@ -26,7 +26,7 @@
     "tailwind-merge": "^3.4.0",
     "vega": "^6.2.0",
     "vega-embed": "^7.1.0",
-    "vega-lite": "^6.4.2"
+    "vega-lite": "^6.4.3"
   },
   "overrides": {
     "@xmldom/xmldom": "^0.8.12"
@@ -39,7 +39,7 @@
     "autoprefixer": "^10.5.0",
     "eslint": "^10.3.0",
     "eslint-config-next": "^16.2.4",
-    "lucide-react": "^1.11.0",
+    "lucide-react": "^1.14.0",
     "postcss": "^8.5.13",
     "tailwindcss": "^4.2.2",
     "typescript": "^6.0.3"
