@@ -35,7 +35,7 @@ Histoboard provides a **unified view** of pathology foundation model performance
 
 | Metric | Count |
 |--------|-------|
-| Benchmarks | 11 |
+| Benchmarks | 12 |
 | Models | 48 |
 | Evaluation Tasks | 400+ |
 | Organs/Indications | 20+ |
@@ -64,6 +64,7 @@ Histoboard provides a **unified view** of pathology foundation model performance
 | [PathoROB](https://github.com/bifold-pathomics/PathoROB) | 3 | Robustness |
 | [Plismbench](https://github.com/owkin/plism-benchmark) | 4 | Robustness |
 | [PFM-DenseBench](https://github.com/lingxitong/PFM_Segmentation) | 18 | Segmentation |
+| [BC Survival](https://arxiv.org/abs/2604.24679) | 4 | Survival prediction |
 
 Results are checked every Sunday at midnight UTC.
 

@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-05-05
+
+### Benchmarks added
+
+| Benchmark | Tasks | Description |
+|---|---|---|
+| BC Survival (`bc_survival_gustafsson`) | 4 | Breast cancer survival prediction (RFS & PFS) across 3 Swedish cohorts (N=5,434), C-index with 95% bootstrap CI |
+
+### Features
+
+- **BC Survival table**: C-index with 95% bootstrap CI per task; sorted by average rank across all 4 settings
+- **How Rankings Work** (About page): BC Survival entry added
+- **Scaling Laws / Direct Comparison charts**: BC Survival benchmark added to dropdowns
+- **Champion Board**: BC Survival podium added
+- **Bug fix**: Github button on benchmark list and detail pages now only renders when `githubUrl` is present
+
+---
+
 ## 2026-04-15
 
 ### Benchmarks added
