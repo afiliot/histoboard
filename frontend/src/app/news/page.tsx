@@ -21,7 +21,7 @@ const NEWS: NewsItem[] = [
     date: "2026-05-05",
     entries: [
       {
-        text: "Added the BC Survival Benchmark (Gustafsson et al., arXiv:2604.24679), evaluating 13 pathology foundation models on breast cancer survival prediction (RFS & PFS) across 3 independent Swedish cohorts (N=5,434 patients). Results were provided by the first author. C-index values with 95% bootstrap confidence intervals are shown. Check the benchmark on",
+        text: "Added the BC Survival Benchmark (Gustafsson et al., 2026, arXiv:2604.24679), evaluating 13 pathology foundation models on breast cancer survival prediction (RFS & PFS) across 3 independent Swedish cohorts (N=5,434 patients). Results were provided by the first author. C-index values with 95% bootstrap confidence intervals are shown. Check the benchmark on",
         links: [
           { label: "BC Survival", href: "/benchmarks/bc_survival_gustafsson" },
         ],

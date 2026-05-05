@@ -56,7 +56,7 @@ type PFMMetric =
   | "meanF1";
 
 const METRIC_OPTIONS: { value: PFMMetric; label: string }[] = [
-  { value: "mDiceRank",            label: "mDICE Rank" },
+  { value: "mDiceRank",            label: "mDICE rank" },
   { value: "mDice",                label: "mDice" },
   { value: "mIoU",                 label: "mIoU" },
   { value: "frequencyWeightedIoU", label: "Freq. Weighted IoU" },

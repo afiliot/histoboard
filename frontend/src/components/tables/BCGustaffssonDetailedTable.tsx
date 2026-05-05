@@ -26,16 +26,6 @@ export function BCGustaffssonDetailedTable({
       <p className="mb-3 text-sm text-muted-foreground">
         C-index with 95% bootstrap confidence intervals across 4 evaluation
         settings (RFS/PFS × all patients / ER+ &amp; HER2− subgroup).
-        Results provided by the authors of{" "}
-        <a
-          href="https://arxiv.org/abs/2604.24679"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline hover:text-foreground"
-        >
-          Gustafsson et al.
-        </a>{" "}
-        (N=5,434 patients across 3 Swedish cohorts).
       </p>
 
       <div className="overflow-x-auto overflow-y-auto max-h-[70vh] border rounded-lg">
