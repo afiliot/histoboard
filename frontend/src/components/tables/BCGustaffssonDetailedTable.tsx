@@ -46,7 +46,7 @@ export function BCGustaffssonDetailedTable({
                 Model
               </th>
               <th className="px-2 py-2 text-center font-semibold min-w-[70px] bg-muted/80">
-                <div className="text-xs leading-tight">Mean<br />rank</div>
+                <div className="text-xs leading-tight">Average<br />rank</div>
               </th>
               <th className="px-2 py-2 text-center font-semibold min-w-[80px] bg-muted/80">
                 <div className="text-xs leading-tight">Mean<br />C-index</div>
