@@ -42,6 +42,7 @@ export const BENCHMARK_REFS: BenchmarkRef[] = [
   { id: "pathorob", name: "PathoROB" },
   { id: "plism", name: "Plismbench" },
   { id: "pfm_densebench", name: "PFM-DenseBench", scoreHigherIsBetter: false },
+  { id: "bc_survival", name: "BC Survival" },
 ];
 
 // =============================================================================
