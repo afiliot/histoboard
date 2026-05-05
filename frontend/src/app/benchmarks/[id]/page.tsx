@@ -197,12 +197,14 @@ export default async function BenchmarkDetailPage({ params }: { params: Promise<
                   </Button>
                 </a>
               )}
-              <a href={benchmark.url} target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="sm" className="w-full justify-start">
-                  <ExternalLink className="mr-2 h-4 w-4" />
-                  Github
-                </Button>
-              </a>
+              {benchmark.githubUrl && (
+                <a href={benchmark.githubUrl} target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" size="sm" className="w-full justify-start">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Github
+                  </Button>
+                </a>
+              )}
             </div>
           </div>
         </CardHeader>
