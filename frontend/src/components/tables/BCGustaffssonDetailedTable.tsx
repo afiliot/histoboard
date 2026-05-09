@@ -19,7 +19,7 @@ export function BCGustaffssonDetailedTable({
   results,
 }: BCGustaffssonDetailedTableProps) {
   const { resultsMap, taskStats, modelAvgRanks, modelAvgValues, sortedModels } =
-    useDetailedTableData({ models, filteredTasks: tasks, results });
+    useDetailedTableData({ models, filteredTasks: tasks, results, useStoredRanks: true });
 
   return (
     <div>

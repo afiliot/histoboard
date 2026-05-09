@@ -44,6 +44,8 @@ export interface UseDetailedTableDataOptions<R extends Result = Result> {
   results: R[];
   /** Optional function to extract the metric value from a result (default: r => r.value) */
   getMetricValue?: (result: R) => number | undefined;
+  /** When true, use the pre-computed `rank` field from each result instead of deriving ranks from sorted values. Use when stored ranks handle ties correctly (e.g. shared rank for equal values). */
+  useStoredRanks?: boolean;
 }
 
 /**
@@ -117,6 +119,7 @@ export function useDetailedTableData<R extends Result = Result>({
   filteredTasks,
   results,
   getMetricValue = (r) => r.value,
+  useStoredRanks = false,
 }: UseDetailedTableDataOptions<R>): UseDetailedTableDataReturn {
   // Create a lookup map for results: modelId -> taskId -> value
   const resultsMap = useMemo(() => {
@@ -163,32 +166,28 @@ export function useDetailedTableData<R extends Result = Result>({
   const modelAvgRanks = useMemo(() => {
     const avgRanks = new Map<string, number>();
 
-    // For each task, compute ranks
     const taskRanks = new Map<string, Map<string, number>>();
     for (const task of filteredTasks) {
-      const taskResults = results
-        .filter((r) => r.taskId === task.id)
-        .map((r) => ({
-          modelId: r.modelId,
-          value: getMetricValue(r) ?? 0,
-        }))
-        .sort((a, b) => b.value - a.value); // Higher is better
-
       const ranks = new Map<string, number>();
-      taskResults.forEach((r, idx) => {
-        ranks.set(r.modelId, idx + 1);
-      });
+      if (useStoredRanks) {
+        for (const r of results) {
+          if (r.taskId === task.id) ranks.set(r.modelId, r.rank);
+        }
+      } else {
+        const taskResults = results
+          .filter((r) => r.taskId === task.id)
+          .map((r) => ({ modelId: r.modelId, value: getMetricValue(r) ?? 0 }))
+          .sort((a, b) => b.value - a.value);
+        taskResults.forEach((r, idx) => ranks.set(r.modelId, idx + 1));
+      }
       taskRanks.set(task.id, ranks);
     }
 
-    // Compute average rank per model
     for (const model of models) {
       const ranks: number[] = [];
       for (const task of filteredTasks) {
         const rank = taskRanks.get(task.id)?.get(model.id);
-        if (rank !== undefined) {
-          ranks.push(rank);
-        }
+        if (rank !== undefined) ranks.push(rank);
       }
       if (ranks.length > 0) {
         avgRanks.set(model.id, ranks.reduce((a, b) => a + b, 0) / ranks.length);
@@ -196,7 +195,7 @@ export function useDetailedTableData<R extends Result = Result>({
     }
 
     return avgRanks;
-  }, [models, filteredTasks, results, getMetricValue]);
+  }, [models, filteredTasks, results, getMetricValue, useStoredRanks]);
 
   // Compute average metric value per model (across filtered tasks)
   const modelAvgValues = useMemo(() => {
