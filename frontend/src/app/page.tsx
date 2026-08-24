@@ -87,7 +87,9 @@ export default function HomePage() {
         <CardHeader className="pb-2">
           <CardTitle className="text-sm font-medium text-muted-foreground">
             {benchmark.shortName}
-            {(benchmark.id === "pathorob" || benchmark.id === "plism") && (
+            {(benchmark.id === "pathorob" ||
+              benchmark.id === "plism" ||
+              benchmark.id === "croma") && (
               <span className="ml-1 text-[10px]">(robustness)</span>
             )}
           </CardTitle>

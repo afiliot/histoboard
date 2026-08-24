@@ -29,7 +29,7 @@ histoboard/
 │   │   │   ├── filters/            # Shared filter UI components
 │   │   │   ├── layout/             # Header, Footer
 │   │   │   ├── leaderboard/        # Leaderboard-specific filters
-│   │   │   ├── tables/             # Benchmark result tables (11 files)
+│   │   │   ├── tables/             # Benchmark result tables (14 files)
 │   │   │   └── ui/                 # Shadcn/Radix UI primitives
 │   │   ├── data/                   # Static JSON data (models, tasks, results, rankings)
 │   │   ├── hooks/                  # Custom React hooks
@@ -44,7 +44,7 @@ histoboard/
 │   │   ├── scrapers/               # Benchmark-specific scrapers
 │   │   ├── normalizers/            # Model ID normalization
 │   │   ├── exporters/              # JSON export to frontend/src/data/
-│   │   ├── config.py               # Data source definitions (11 benchmarks)
+│   │   ├── config.py               # Data source definitions (14 sources)
 │   │   ├── main.py                 # Scraper orchestration
 │   │   └── monitor.py              # Weekly change detection via SHA256 hashes
 │   └── data/                       # Snapshots, hashes, change reports
@@ -75,11 +75,11 @@ Benchmark ─────────> Result <──── Task
 
 | File | Records | Description |
 |------|---------|-------------|
-| `models.json` | ~48 | Foundation model metadata (architecture, params, license, training data, URLs) |
-| `benchmarks.json` | 11 | Benchmark definitions (name, category, task count, source URLs) |
+| `models.json` | ~54 | Foundation model metadata (architecture, params, license, training data, URLs) |
+| `benchmarks.json` | 13 | Benchmark definitions (name, category, task count, source URLs) |
 | `tasks.json` | 400+ | Individual evaluation tasks (organ, metric, category, benchmark link) |
-| `results.json` | ~7,700 | Performance scores — one record per (model, task) pair |
-| `rankings.json` | ~190 | Pre-computed average ranks per (model, benchmark) pair |
+| `results.json` | ~7,800 | Performance scores — one record per (model, task) pair |
+| `rankings.json` | ~230 | Pre-computed average ranks per (model, benchmark) pair |
 
 ### Key Type Definitions (`types/index.ts`)
 
@@ -138,7 +138,7 @@ Pages using dynamic routes (`[id]`) export `generateStaticParams()` to pre-rende
 | `/models` | Model Browser | Card grid with attribute filters and search |
 | `/models/[id]` | Model Detail | Profile page with metadata, badges, per-benchmark rankings |
 | `/arena` | Arena | Head-to-head comparison of 2–5 models with task filters |
-| `/benchmarks` | Benchmark Index | Overview cards for all 11 benchmarks |
+| `/benchmarks` | Benchmark Index | Overview cards for all 13 benchmarks |
 | `/benchmarks/[id]` | Benchmark Detail | Per-benchmark results table (dispatches to custom component) |
 | `/timeline` | Timeline | Model release dates visualized chronologically |
 | `/news` | News | Chronological log of updates: new models, benchmark refreshes, feature additions |
@@ -194,7 +194,7 @@ React components that receive data and render UI. No business logic — that liv
 
 | Directory | Components | Description |
 |-----------|-----------|-------------|
-| `tables/` | 12 files | Benchmark result tables (1 leaderboard + 11 benchmark-specific) |
+| `tables/` | 14 files | Benchmark result tables (1 leaderboard + 13 benchmark-specific) |
 | `charts/` | 4 files | Vega-Lite chart wrappers and chart-specific data assembly |
 | `filters/` | 1 file | `ModelAttributeFilterBar` — 7 filter dropdowns shared across pages |
 | `leaderboard/` | 1 file | `LeaderboardFilters` — composes `ModelAttributeFilterBar` + model selector |
@@ -291,7 +291,7 @@ The dropdown shows "Indications (5/8)" in its trigger, with Select All / Clear A
 
 ## Benchmark Table Pattern
 
-Each of the 11 benchmarks has a dedicated table component. Most follow this standard pattern:
+Each of the 13 benchmarks has a dedicated table component. Most follow this standard pattern:
 
 ```typescript
 function MyBenchmarkDetailedTable({ models, tasks, results }) {
@@ -337,15 +337,16 @@ function MyBenchmarkDetailedTable({ models, tasks, results }) {
 | **THUNDER** | Manual data computation: lower-is-better metrics (ECE, ASR), rank sum sort |
 | **STAMP** | Standard pattern with search |
 | **PFM-DenseBench** | Multi-metric selector (9 options); default shows mDICE Rank (avg rank ± SD); other metrics show avg value + 95% CI; inverted color scale (lower rank = greener); uses extended `PFMDenseBenchResult` type |
+| **CRoMa** | Multi-metric selector (9 options); default CRoMa cells pair the median margin with LTM₁₀ underneath; Δ is left uncoloured (its sign, not its size, is what reads); sorted by the official mean rank carried on a virtual `croma_aggregate` row alongside the Pareto-frontier and TCGA-exposure flags |
 
 ## Scraper System
 
-The Python scraper monitors 11 benchmark data sources for changes.
+The Python scraper monitors 14 benchmark data sources for changes.
 
 ### Pipeline
 
 ```
-config.py (10 DataSource definitions)
+config.py (14 DataSource definitions)
     │
     ▼
 monitor.py (weekly via GitHub Actions)
@@ -365,7 +366,7 @@ data/reports/ (change detection reports)
 
 | Type | Parsing | Examples |
 |------|---------|---------|
-| `csv` | Raw text comparison | EVA, Stanford |
+| `csv` | Raw text comparison | EVA, Stanford, CRoMa (4 files) |
 | `json` | Raw text comparison | PathBench |
 | `readme` / `markdown` | Section extraction via fuzzy header matching | HEST, Sinai, PathoROB, PLISM, THUNDER |
 | `html` | Raw HTML comparison | Patho-Bench (arXiv) |

@@ -40,6 +40,7 @@ export const BENCHMARK_REFS: BenchmarkRef[] = [
   { id: "stamp", name: "STAMP" },
   { id: "thunder", name: "THUNDER", scoreHigherIsBetter: false },
   { id: "pathorob", name: "PathoROB" },
+  { id: "croma", name: "CRoMa", scoreHigherIsBetter: false },
   { id: "plism", name: "Plismbench" },
   { id: "pfm_densebench", name: "PFM-DenseBench", scoreHigherIsBetter: false },
   { id: "bc_survival_gustafsson", name: "BC Survival" },

@@ -69,6 +69,7 @@ interface NormalizationStats {
 export const ALL_ROBUSTNESS_BENCHMARKS: BenchmarkOption[] = [
   { id: "pathorob", label: "PathoROB" },
   { id: "plism", label: "Plismbench" },
+  { id: "croma", label: "CRoMa" },
 ];
 
 /**
@@ -92,6 +93,11 @@ const ROBUSTNESS_TASK_IDS: Record<string, string[]> = {
     "plism_cross_scanner",
     "plism_cross_staining",
     "plism_cross_both",
+  ],
+  croma: [
+    "croma_camelyon",
+    "croma_tcga_4x4",
+    "croma_tolkach_esca",
   ],
 };
 
@@ -136,6 +142,7 @@ export const ALL_BENCHMARKS: BenchmarkOption[] = [
   // Robustness benchmarks
   { id: "pathorob", label: "PathoROB" },
   { id: "plism", label: "Plismbench" },
+  { id: "croma", label: "CRoMa" },
 ];
 
 /**

@@ -36,6 +36,9 @@ jobs:
       - name: Update PFM-DenseBench data
         run: python scraper/update_pfm_densebench_data.py
 
+      - name: Update CRoMa data
+        run: python scraper/update_croma_data.py
+
       - name: Run benchmark monitor
         id: monitor
         working-directory: scraper
@@ -126,6 +129,8 @@ jobs:
           # Add hash files, snapshots, and updated benchmark data
           git add scraper/data/ || true
           git add frontend/src/data/results.json || true
+          git add frontend/src/data/tasks.json || true
+          git add frontend/src/data/rankings.json || true
 
           if git diff --staged --quiet; then
             echo "No changes to commit"
@@ -136,7 +141,7 @@ jobs:
             git push origin "$BRANCH"
             gh pr create \
               --title "chore: update benchmark source hashes" \
-              --body "Automated update of benchmark source hashes and PFM-DenseBench results data from the monitor workflow." \
+              --body "Automated update of benchmark source hashes and PFM-DenseBench / CRoMa results data from the monitor workflow." \
               --base main \
               --head "$BRANCH" \
               --label "automated" || true
