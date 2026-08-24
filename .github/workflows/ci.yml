@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# One run per PR: a new push cancels the previous, still-running check.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build frontend
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      # Keep this in step with deploy.yml. The point of this workflow is to
+      # fail here rather than mid-deploy, which only holds while both use the
+      # same Node version. next requires >=20.9.0.
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: frontend/package-lock.json
+
+      # npm ci (not npm install) also fails when package.json and the
+      # lockfile have drifted out of sync, which is what a bad dependency
+      # bump looks like.
+      - name: Install dependencies
+        working-directory: frontend
+        run: npm ci
+
+      # Runs next build, which type-checks as part of the build.
+      - name: Build
+        working-directory: frontend
+        run: npm run build
+
+      # deploy.yml uploads frontend/out. If the static export silently stopped
+      # emitting, the build above would still pass and the deploy would publish
+      # nothing, so assert the directory exists and is non-empty.
+      - name: Verify static export produced output
+        working-directory: frontend
+        run: |
+          if [ ! -d out ]; then
+            echo "::error::next build did not produce frontend/out — deploy.yml would upload nothing."
+            exit 1
+          fi
+          if [ -z "$(ls -A out)" ]; then
+            echo "::error::frontend/out is empty — deploy.yml would publish an empty site."
+            exit 1
+          fi
+          echo "frontend/out contains $(find out -type f | wc -l | tr -d ' ') files"
