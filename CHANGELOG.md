@@ -14,7 +14,7 @@
 |---|---|---|
 | `waiv_mascaret` | Mascaret | Waiv (ViT-g/14, 1.1B, robustness fine-tune of Midnight-12k) |
 | `waiv_phaet` | Phaet | Waiv (ViT-L/16, 307M, robustness fine-tune of Phikon-v2) |
-| `aignostics_rudolfv_2` | RudolfV-2 | Aignostics (ViT-g/8, 1.1B, DINOv2/DINOv3 + posttraining, 300K+ WSIs) |
+| `aignostics_rudolfv_2` | RudolfV-2 | Aignostics (ViT-g/8, 1.1B, DINOv2/DINOv3 + post-training, 300K+ WSIs) |
 | `aignostics_rudolfv_2_b` | RudolfV-2-B | Aignostics (ViT-B/8, 86M, distilled) |
 | `aignostics_rudolfv_2_s` | RudolfV-2-S | Aignostics (ViT-S/8, 22M, distilled) |
 | `radboud_prost40m` | Prost40M | Radboud UMC (ViT-S/14, 22M, DINO, prostatectomy-only) |
