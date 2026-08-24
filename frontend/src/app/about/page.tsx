@@ -52,6 +52,7 @@ const BENCHMARK_METHODOLOGY: Record<string, { metric: string; source: "official"
   stanford:        { metric: "Average AUROC across 41 tasks",                              source: "official" },
   thunder:         { metric: "Rank sum across 6 tasks",                                    source: "official", lowerIsBetter: false },
   bc_survival_gustafsson: { metric: "Average rank across 2 survival tasks and 2 populations",            source: "official" },
+  croma:           { metric: "Mean of the CRoMa and tail ranks across 3 cohorts",             source: "official", lowerIsBetter: true },
 };
 
 export default function AboutPage() {

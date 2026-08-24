@@ -10,7 +10,7 @@
     ],
     "url": "https://kaiko-ai.github.io/eva/main/",
     "githubUrl": "https://github.com/kaiko-ai/eva",
-        "organs": [
+    "organs": [
       "breast",
       "colon",
       "prostate",
@@ -31,7 +31,7 @@
     ],
     "url": "https://github.com/birkhoffkiki/PathBench",
     "githubUrl": "https://github.com/birkhoffkiki/PathBench",
-        "organs": [
+    "organs": [
       "breast",
       "colorectal",
       "gastric",
@@ -82,11 +82,14 @@
     "id": "hest",
     "name": "HEST-Benchmark",
     "shortName": "HEST",
-    "category": ["spatial-transcriptomics", "H&E"],
+    "category": [
+      "spatial-transcriptomics",
+      "H&E"
+    ],
     "description": "HEST-Benchmark is a spatial transcriptomics benchmark from the Mahmood Lab evaluating foundation models on gene expression prediction from H&E images. The benchmark assesses how well models can predict spatially-resolved gene expression patterns directly from histology across 9 cancer types using Pearson correlation as the primary metric.",
     "url": "https://github.com/mahmoodlab/HEST",
     "githubUrl": "https://github.com/mahmoodlab/HEST",
-        "paperUrl": "https://www.nature.com/articles/s41592-024-02461-y",
+    "paperUrl": "https://www.nature.com/articles/s41592-024-02461-y",
     "datasetUrl": "https://huggingface.co/datasets/MahmoodLab/hest",
     "resultsUrl": "https://github.com/mahmoodlab/HEST?tab=readme-ov-file#hest-benchmark-results-030426",
     "organs": [
@@ -268,12 +271,34 @@
       "survival",
       "H&E"
     ],
-    "description": "Multi-cohort benchmark by Gustafsson et al. (2026) evaluating 13 pathology foundation models on breast cancer survival prediction (RFS and PFS) across three independent Swedish clinical cohorts (N=5,434 patients). Models are assessed on all patients and on the ER+ & HER2− subgroup, using concordance index (C-index) as the primary metric.",
+    "description": "Multi-cohort benchmark by Gustafsson et al. (2026) evaluating 13 pathology foundation models on breast cancer survival prediction (RFS and PFS) across three independent Swedish clinical cohorts (N=5,434 patients). Models are assessed on all patients and on the ER+ & HER2\u2212 subgroup, using concordance index (C-index) as the primary metric.",
     "url": "https://arxiv.org/abs/2604.24679",
     "paperUrl": "https://arxiv.org/abs/2604.24679",
     "organs": [
       "breast"
     ],
     "taskCount": 4
+  },
+  {
+    "id": "croma",
+    "name": "CRoMa",
+    "shortName": "CRoMa",
+    "category": [
+      "pathology",
+      "robustness",
+      "H&E"
+    ],
+    "description": "Cross-confounder robustness margin measuring how much of a model's embedding neighbourhood is driven by biology rather than by the acquisition center. Builds on PathoROB's Robustness Index and scores 25 encoders on its three tile cohorts, reporting a median margin alongside a lower-tail severity.",
+    "url": "https://clemsgrs.github.io/croma/",
+    "githubUrl": "https://github.com/clemsgrs/croma",
+    "paperUrl": "https://arxiv.org/abs/2607.25497",
+    "datasetUrl": "https://clemsgrs.github.io/croma/datasets.html",
+    "resultsUrl": "https://github.com/clemsgrs/croma/blob/main/results/cross_benchmark.csv",
+    "organs": [
+      "multi-organ",
+      "breast",
+      "esophagus"
+    ],
+    "taskCount": 3
   }
 ]

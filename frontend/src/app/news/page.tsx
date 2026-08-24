@@ -18,6 +18,17 @@ interface NewsItem {
 
 const NEWS: NewsItem[] = [
   {
+    date: "2026-08-24",
+    entries: [
+      {
+        text: "Added CRoMa (Grisi et al., 2026, arXiv:2607.25497), a confounder-robustness benchmark building on PathoROB: it scores 25 pathology encoders on the same three tile cohorts with a signed margin (CRoMa) reported next to its lower-tail severity (LTM\u2081\u2080), so a strong median margin no longer hides a brittle tail. Also added the RudolfV-2 family (Aignostics), Mascaret and Phaet (Waiv) and Prost40M (Radboud UMC) to the Models catalogue. Check the benchmark on",
+        links: [
+          { label: "CRoMa", href: "/benchmarks/croma" },
+        ],
+      },
+    ],
+  },
+  {
     date: "2026-05-05",
     entries: [
       {

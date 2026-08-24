@@ -1,5 +1,37 @@
 # Changelog
 
+## 2026-08-24
+
+### Benchmarks added
+
+| Benchmark | Tasks | Description |
+|---|---|---|
+| CRoMa (`croma`) | 3 | Cross-confounder robustness margin on PathoROB's three tile cohorts (Camelyon, TCGA-4x4, Tolkach-ESCA): a signed median margin reported next to its lower-tail severity (LTM10) |
+
+### Models added
+
+| Model ID | Name | Organization |
+|---|---|---|
+| `waiv_mascaret` | Mascaret | Waiv (ViT-g/14, 1.1B, robustness fine-tune of Midnight-12k) |
+| `waiv_phaet` | Phaet | Waiv (ViT-L/16, 307M, robustness fine-tune of Phikon-v2) |
+| `aignostics_rudolfv_2` | RudolfV-2 | Aignostics (ViT-g/8, 1.1B, DINOv2/DINOv3 + post-training, 300K+ WSIs) |
+| `aignostics_rudolfv_2_b` | RudolfV-2-B | Aignostics (ViT-B/8, 86M, distilled) |
+| `aignostics_rudolfv_2_s` | RudolfV-2-S | Aignostics (ViT-S/8, 22M, distilled) |
+| `radboud_prost40m` | Prost40M | Radboud UMC (ViT-S/14, 22M, DINO, prostatectomy-only) |
+
+### Features
+
+- **CRoMa table**: multi-metric selector (CRoMa, LTM10, RI, MaRI, delta, F(0), support, bio bacc, conf bacc); default CRoMa cells pair the median margin with its tail underneath; Pareto-frontier and TCGA-exposure markers; sorted by the official mean rank
+- Extended `Result` type with `CromaResult`; panel ranks and flags ride on a virtual `croma_aggregate` row, following the `pfm_densebench_avgrank` precedent
+- **`scraper/update_croma_data.py`**: fetches the four committed CSVs from `clemsgrs/croma` and rewrites the CRoMa slice of `tasks.json`, `results.json` and `rankings.json`. Wired into the weekly monitor workflow
+- **Monitor**: `cross_benchmark.csv` plus the three cohort CSVs added as watched data sources
+
+### Notes
+
+- CRoMa's natural-image control (DINOv2-B) is not ingested, consistent with the 2026-03-18 removal of generic vision baselines. Its slide-level PCaBiop cohort is also out of scope: a different roster that takes no part in the tile panel's ranks
+
+---
+
 ## 2026-05-05
 
 ### Benchmarks added

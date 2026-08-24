@@ -55,6 +55,33 @@ DATA_SOURCES: list[DataSource] = [
         url="https://raw.githubusercontent.com/gevaertlab/benchmarking-path-models/main/data/benchmarking_updated_ncomm.csv",
         type="csv",
     ),
+    # CRoMa publishes its results as committed CSVs: cross_benchmark.csv holds
+    # the panel ranks and the per-cohort margin/tail pairs, and the three cohort
+    # files hold the diagnostics (RI, MaRI, F(0), support) shown per cell.
+    DataSource(
+        id="croma",
+        name="CRoMa",
+        url="https://raw.githubusercontent.com/clemsgrs/croma/main/results/cross_benchmark.csv",
+        type="csv",
+    ),
+    DataSource(
+        id="croma_camelyon",
+        name="CRoMa (Camelyon cohort)",
+        url="https://raw.githubusercontent.com/clemsgrs/croma/main/results/camelyon.csv",
+        type="csv",
+    ),
+    DataSource(
+        id="croma_tcga_4x4",
+        name="CRoMa (TCGA-4x4 cohort)",
+        url="https://raw.githubusercontent.com/clemsgrs/croma/main/results/tcga-4x4.csv",
+        type="csv",
+    ),
+    DataSource(
+        id="croma_tolkach_esca",
+        name="CRoMa (Tolkach-ESCA cohort)",
+        url="https://raw.githubusercontent.com/clemsgrs/croma/main/results/tolkach-esca.csv",
+        type="csv",
+    ),
     # JSON-based benchmarks
     DataSource(
         id="pathbench",

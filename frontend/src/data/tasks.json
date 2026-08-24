@@ -3553,5 +3553,29 @@
     "organ": "breast",
     "metric": "c-index",
     "category": "survival"
+  },
+  {
+    "id": "croma_camelyon",
+    "benchmarkId": "croma",
+    "name": "Camelyon",
+    "category": "Confounder Robustness",
+    "organ": "breast",
+    "metric": "croma"
+  },
+  {
+    "id": "croma_tcga_4x4",
+    "benchmarkId": "croma",
+    "name": "TCGA-4x4",
+    "category": "Confounder Robustness",
+    "organ": "multi-organ",
+    "metric": "croma"
+  },
+  {
+    "id": "croma_tolkach_esca",
+    "benchmarkId": "croma",
+    "name": "Tolkach ESCA",
+    "category": "Confounder Robustness",
+    "organ": "esophagus",
+    "metric": "croma"
   }
 ]

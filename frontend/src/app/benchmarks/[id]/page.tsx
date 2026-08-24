@@ -25,6 +25,7 @@ import { PathoROBDetailedTable } from "@/components/tables/PathoROBDetailedTable
 import { PLISMDetailedTable } from "@/components/tables/PLISMDetailedTable";
 import { PFMDenseBenchDetailedTable } from "@/components/tables/PFMDenseBenchDetailedTable";
 import { BCGustaffssonDetailedTable } from "@/components/tables/BCGustaffssonDetailedTable";
+import { CromaDetailedTable } from "@/components/tables/CromaDetailedTable";
 
 import modelsData from "@/data/models.json";
 import tasksData from "@/data/tasks.json";
@@ -72,6 +73,7 @@ const benchmarkTableMap: Record<string, React.ComponentType<{
   plism: PLISMDetailedTable,
   pfm_densebench: PFMDenseBenchDetailedTable,
   bc_survival_gustafsson: BCGustaffssonDetailedTable,
+  croma: CromaDetailedTable,
 };
 
 export function generateStaticParams() {

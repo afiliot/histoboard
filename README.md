@@ -65,6 +65,7 @@ Histoboard provides a **unified view** of pathology foundation model performance
 | [Plismbench](https://github.com/owkin/plism-benchmark) | 4 | Robustness |
 | [PFM-DenseBench](https://github.com/lingxitong/PFM_Segmentation) | 18 | Segmentation |
 | [BC Survival](https://arxiv.org/abs/2604.24679) | 4 | Survival prediction |
+| [CRoMa](https://clemsgrs.github.io/croma/) | 3 | Robustness |
 
 Results are checked every Sunday at midnight UTC.
 
