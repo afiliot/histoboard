@@ -244,6 +244,12 @@ def main() -> None:
                     if value is not None:
                         entry[field] = value
 
+            # The per-cohort CSVs dropped their `delta` column upstream
+            # (2026-08); it's exactly mari - ri, so derive it locally rather
+            # than lose it if the source keeps omitting it.
+            if "delta" not in entry and "mari" in entry and "ri" in entry:
+                entry["delta"] = rounded(entry["mari"] - entry["ri"])
+
             entries.append({k: v for k, v in entry.items() if v is not None})
 
         # Panel-level ranks. The control has no ranks, hence the None guard.
