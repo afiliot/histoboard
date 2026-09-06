@@ -32,7 +32,7 @@
     "@xmldom/xmldom": "^0.8.12"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.3.0",
+    "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^25.8.0",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.3",
